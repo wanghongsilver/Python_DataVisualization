@@ -13,7 +13,7 @@ plt.ylabel("Square of Value", fontsize=14)
 #设置刻度标记大小
 plt.tick_params(axis='both', which='major', labelsize=14)
 
-#设置每个坐标轴的取值范围
+#设置每个坐标轴的取值范围git
 plt.axis([0, 1100, 0, 1100000])
 
 plt.show()
