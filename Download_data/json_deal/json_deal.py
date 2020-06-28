@@ -8,8 +8,8 @@ with open(filename, 'r') as f_json:
 #打印每一天的信息
 for btc_dir in btc_data:
     date = btc_dir['date']
-    month = btc_dir['month']
-    week = btc_dir['week']
+    month = int(btc_dir['month'])
+    week = int(btc_dir['week'])
     weekday = btc_dir['weekday']
-    close = btc_dir['close']
+    close = float(btc_dir['close'])
     print("{} is month {} week {}, {}, the close price is {} RMB".format(date, month, week, weekday, close))
