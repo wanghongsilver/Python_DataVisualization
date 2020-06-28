@@ -42,8 +42,11 @@ line_chart_month = draw_line_average(months[:idx_month], closes[:idx_month], '�
 line_chart_month
 
 idx_week = dates.index('2017-12-11')
-line_chart_week = draw_line_average(weeks[1:idx_week], closes[1:idx_week], '收盘价周日均值（￥）', '周日均值')
-line_chart_week
+wd = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+weeekdays_int = [wd.index(w) + 1 for w in weekdays[1:idx_week]]
+line_chart_week = draw_line_average(weeekdays_int, closes[1:idx_week], '收盘价星期均值（￥）', '星期均值')
+line_chart_week.x_labels = ['周一', '周二', '周三', '周四', '周五', '周六', '周天']
+line_chart_week.render_to_file('./outputsvg/收盘价星期均值（￥）.svg')
 
 
 
