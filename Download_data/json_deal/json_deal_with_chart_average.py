@@ -48,5 +48,3 @@ line_chart_week = draw_line_average(weeekdays_int, closes[1:idx_week], '收盘�
 line_chart_week.x_labels = ['周一', '周二', '周三', '周四', '周五', '周六', '周天']
 line_chart_week.render_to_file('./outputsvg/收盘价星期均值（￥）.svg')
 
-
-
